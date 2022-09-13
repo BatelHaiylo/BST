@@ -1,4 +1,4 @@
-const getNumIndexFromDefendingArray = (sortedNumArray,num) => {
+const getNumIndexFromAscendingOrderArray = (sortedNumArray,num) => {
     const midIndex =(Math.floor((sortedNumArray.length)/2))
     
     if(sortedNumArray.length == 1)return false;
@@ -10,10 +10,10 @@ const getNumIndexFromDefendingArray = (sortedNumArray,num) => {
 
     if(sortedNumArray[midIndex] === num) return true
     if(num < sortedNumArray[midIndex])
-      return  getNumIndexFromDefendingArray(leftArr,num)
-      return getNumIndexFromDefendingArray(rightArr,num)
+      return  getNumIndexFromAscendingOrderArray(leftArr,num)
+      return getNumIndexFromAscendingOrderArray(rightArr,num)
 
      
 }
 const givenArr = [3,5,7,12,17,24]
-console.log(getNumIndexFromDefendingArray(givenArr,4))
+console.log(getNumIndexFromAscendingOrderArray(givenArr,4))
